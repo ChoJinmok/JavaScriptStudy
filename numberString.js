@@ -33,5 +33,5 @@ console.log("coding\neverybody"); // \n: 개행
 console.log("coding"+" "+"everybody");
 console.log("1"+"1");
 console.log("coding everybody".length); //문자열의 길이 알려줌
-console.log("code".indexOf("c"));
+console.log("code".indexOf("c")); //문자열에서 찾고자 하는 정보의 위치 알려줌
 console.log("code".indexOf("d"));
