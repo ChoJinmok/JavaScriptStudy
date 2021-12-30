@@ -14,3 +14,17 @@ Math.sqrt(9); //제곱근
 Math.random(); //0~1 에서 랜덤한 실수
 var num1 = Math.round(100 * Math.random());
 console.log(num1);
+
+
+// 문자는 큰따옴표 작은따옴표 둘다 가능하다.
+console.log("coding everybody");
+console.log('coding everybody');
+console.log("egoing's coding everybody"); // 사이에 ' 넣고 싶으면 이런식으로 가능함
+console.log('egoing"s coding everybody'); // 사이에 " 넣고 싶으면 이런식으로 가능함
+console.log('egoing\'s coding everybody'); // \넣어서 넣는 것도 가능 \다음에 오늘 문자는 정보로 인식한다는 약속 -> escape(도망)문자
+
+console.log(1);
+console.log("1");
+console.log(typeof 1);
+console.log(typeof "1");
+console.log("abcde"); // 문자들의 모임 : 문자열
