@@ -27,10 +27,12 @@ console.log((100+10)/10);
 console.log(((100+10)/10)-10);
 console.log((((100+10)/10)-10)*10);
 
-a = 100;
-a = a + 10;
+a = 100; // 변할 수 있는 영역 : 여기만 바꾸면 다 바뀜
+a = a + 10; // 아래로는 
 console.log(a);
 a = a / 10 ;
 console.log(a);
 a = a - 10;
-console
+console.log(a);
+a = a * 10;
+console.log(a); // 변할 수 없는 영역
