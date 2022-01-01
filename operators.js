@@ -50,3 +50,57 @@ console.log(10>10);
 console.log(10>=20);
 console.log(10>=1);
 console.log(10>=10);
+
+
+
+//논리 연산자
+// and 둘다 참일때만 시행
+if (true && true) {
+    console.log(1);
+}
+
+if (true && false) {
+    console.log(2);
+}
+
+if (false && true) {
+    console.log(3);
+}
+
+if (false && false) {
+    console.log(4);
+}
+
+// or 둘중에 하나라도 참일때 시행
+if (true || true) {
+    console.log(1);
+}
+
+if (true || false) {
+    console.log(2);
+}
+
+if (false || true) {
+    console.log(3);
+}
+
+if (false || false) {
+    console.log(4);
+}
+
+// not 연산자
+if (!true && !true) {
+    console.log(1);
+}
+
+if (!true && !false) {
+    console.log(2);
+}
+
+if (!false && !true) {
+    console.log(3);
+}
+
+if (!false && !false) {
+    console.log(4);
+}

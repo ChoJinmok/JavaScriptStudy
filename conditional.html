@@ -8,16 +8,35 @@
   </head>
   <body>
     <script>
+      // var id = prompt("아이디를 입력해주세요.");
+      // if (id === "egoing") {
+      //   var password = prompt("비밀번호를 입력해주세요.");
+      //   if (password === "111111") {
+      //     alert(id + "님 반갑습니다.");
+      //   } else {
+      //     alert("비밀번호가 다릅니다.");
+      //   }
+      // } else {
+      //   alert("아이디가 일치하지 않습니다.");
+      // }
+
+      // var id = prompt("아이디를 입력해주세요.");
+      // var password = prompt("비밀번호를 입력해주세요.");
+      // if (id === "egoing" && password === "111111") {
+      //   alert(id + "님 반갑습니다.");
+      // } else {
+      //   alert("아이디 혹은 비밀번호가 일치하지 않습니다.");
+      // }
+
       var id = prompt("아이디를 입력해주세요.");
-      if (id === "egoing") {
-        var password = prompt("비밀번호를 입력해주세요.");
-        if (password === "111111") {
-          alert(id + "님 반갑습니다.");
-        } else {
-          alert("비밀번호가 다릅니다.");
-        }
+      var password = prompt("비밀번호를 입력해주세요.");
+      if (
+        (id === "egoing" || id === "k8805" || id === "sorialgi") &&
+        password === "111111"
+      ) {
+        alert(id + "님 반갑습니다.");
       } else {
-        alert("아이디가 일치하지 않습니다.");
+        alert("아이디 혹은 비밀번호가 일치하지 않습니다.");
       }
     </script>
   </body>
