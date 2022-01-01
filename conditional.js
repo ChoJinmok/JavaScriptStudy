@@ -69,9 +69,38 @@ if (false) {
 }
 
 
-
-var a = 1;
+// boolean값으로 그냥 true false 넣은면 죽은 코드...
+var a = 1; 
 if (a === 1) {
     console.log(1);
 }
 
+
+// boolean 대체제 
+if (1) { //true로 인식
+    console.log(1);
+}
+if (0) { //falsefh 인식
+    console.log(1);
+}
+// 그냥 true, false 사용하는게 제일 좋다
+
+if ('') { // 빈문자열은 false로 인식
+    console.log('빈문자열'); 
+}
+if ('egoing') { // 그냥 문자열은 true로 인식
+    console.log('egoing');
+}
+if (undefined) { // false로 간주
+    console.log('undefined');
+}
+var c;
+if (c) { // 변수를 선언만 하면 undefined이기 떄문
+    console.log('undefined');
+}
+if (null) { // flase
+    console.log('null');
+}
+if (NaN) { // false
+    console.log('NaN');
+}
