@@ -2,8 +2,18 @@
 //     console.log("Coding everybody");
 // }
 
-var i = 0;
-while (i < 10) {
+// var i = 0;
+// while (i < 10) {
+//     console.log("Coding everybody");
+//     i++;
+// }
+
+for(var i = 0; i < 10; i++) {
     console.log("Coding everybody");
-    i++;
 }
+
+var i = 0;
+console.log(i++); //후행 증가
+
+i = 0;
+console.log(++i); //선행 증가
