@@ -8,12 +8,26 @@
 //     i++;
 // }
 
-for(var i = 0; i < 10; i++) {
-    console.log("Coding everybody");
+// for(var i = 0; i < 10; i++) {
+//     console.log("Coding everybody");
+// }
+
+// var i = 0;
+// console.log(i++); //후행 증가
+
+// i = 0;
+// console.log(++i); //선행 증가
+
+for (var i = 0; i < 10; i++) {
+    if (i === 5) {
+        break;
+    }
+    console.log('coding everybody' + i);
 }
 
-var i = 0;
-console.log(i++); //후행 증가
-
-i = 0;
-console.log(++i); //선행 증가
+for (var i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; //그 시점만 중단 그다음 반복문 계속
+    }
+    console.log('coding everybody' + i);
+}
