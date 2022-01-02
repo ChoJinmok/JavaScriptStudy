@@ -18,16 +18,22 @@
 // i = 0;
 // console.log(++i); //선행 증가
 
-for (var i = 0; i < 10; i++) {
-    if (i === 5) {
-        break;
-    }
-    console.log('coding everybody' + i);
-}
+// for (var i = 0; i < 10; i++) {
+//     if (i === 5) {
+//         break;
+//     }
+//     console.log('coding everybody' + i);
+// }
+
+// for (var i = 0; i < 10; i++) {
+//     if (i === 5) {
+//         continue; //그 시점만 중단 그다음 반복문 계속
+//     }
+//     console.log('coding everybody' + i);
+// }
 
 for (var i = 0; i < 10; i++) {
-    if (i === 5) {
-        continue; //그 시점만 중단 그다음 반복문 계속
+    for (var j = 0; j < 10; j++){
+        console.log('coding everybody ' + i + j); // 문자열과 숫자를 더하면 숫자는 문자로 변함
     }
-    console.log('coding everybody' + i);
 }
