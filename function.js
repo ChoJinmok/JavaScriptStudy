@@ -62,3 +62,18 @@ function get_argument2(arg1, arg2) {
 
 console.log(get_argument2(10, 20));
 console.log(get_argument2(20, 30));
+
+
+var numbering2 = function () {
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+};// 익명함수 쓸때 앞쪽에 세미콜론 으로 문장 마무리 지어줘야됨
+
+
+// 익명함수
+(function () {
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+})();
