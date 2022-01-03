@@ -26,9 +26,16 @@ console.log(get_member2());
 console.log(get_member3());
 
 function get_members() {
-    return ['egoing', 'k8805', 'sorialgi'];
+    return ['egoing', 'k8805', 'sorialgi', 'leezche'];
 }
 var members2 = get_members();
-console.log(members2[0]);
-console.log(members2[1]);
-console.log(members2[2]);
+// console.log(members2[0]);
+// console.log(members2[1]);
+// console.log(members2[2]);
+
+// 위처럼 배열을 하나하나 꺼내 사용하려면 업무도 많아지고 오류가 생길 확률이 높아진다.(배열의 요소값이 없어지거나 생겼을때)
+
+for (var i = 0; i < members2.length; i++) { // length 배열의 요소 개수를 알려주는 명령(변수명이 length)
+    console.log(members2[i].toUpperCase()); // toUpperCase는 JS에서 기본으로 제공하는 함수(내장함수)
+}
+// 내장함수 <-> 사용자정의함수: 사용자가 정의해서 사용하는 함수
