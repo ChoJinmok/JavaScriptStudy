@@ -70,6 +70,8 @@ console.log(li);
 li.pop();
 console.log(li);
 
+
+//정렬
 var li2 = ['c', 'e', 'a', 'b', 'd'];
 li2.sort();
 console.log(li2);
@@ -79,3 +81,5 @@ li.reverse();
 li2.reverse();
 console.log(li);
 console.log(li2);
+
+// JS에서 제공하는 정렬은 기본적인것만 제공 sort(softfunc)으로 커스텀 가능(생활코딩 JavaScript사전 참고)
