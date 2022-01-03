@@ -58,5 +58,24 @@ li.unshift('z'); // 인덱스를 하나씩 추가 하고 앞쪽에 추가
 console.log(li);
 
 // 중가에 추가
-li.splice(3, 0, 'B');
+li.splice(3, 0, 'B'); // splice는 제거한 요소를 return해준다.
 console.log(li);
+
+//제거
+//첫번쨰 요소 제거
+li.shift();
+console.log(li);
+
+//맨뒤에 요소 제거
+li.pop();
+console.log(li);
+
+var li2 = ['c', 'e', 'a', 'b', 'd'];
+li2.sort();
+console.log(li2);
+
+//역순
+li.reverse();
+li2.reverse();
+console.log(li);
+console.log(li2);
