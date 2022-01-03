@@ -6,3 +6,23 @@ console.log(members);
 console.log(members[0]);
 console.log(members[1]);
 console.log(members[2]);
+
+
+//배열의 효용
+//배열이 없다면
+function get_member1() {
+    return 'egoing';
+}
+// 함수의 특징은 여러 인자를 받을 수 있지만 출력은 하나의 값으로 나옴
+// 그럼 이런식으로 하나하나 출력 해야하는건가??
+function get_member2() {
+    return 'k8805';
+}
+function get_member3() {
+    return 'sorialgi';
+}
+console.log(get_member1());
+console.log(get_member2());
+console.log(get_member3());
+
+function get_members
