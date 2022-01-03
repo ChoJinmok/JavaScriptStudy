@@ -39,3 +39,24 @@ for (var i = 0; i < members2.length; i++) { // length 배열의 요소 개수를
     console.log(members2[i].toUpperCase()); // toUpperCase는 JS에서 기본으로 제공하는 함수(내장함수)
 }
 // 내장함수 <-> 사용자정의함수: 사용자가 정의해서 사용하는 함수
+
+
+// 배열 제어
+//추가
+
+// 끝에 하나 추가
+var li = ['a', 'b', 'c', 'd', 'e'];
+li.push('f'); 
+console.log(li);
+
+// 복수의 원소 추가
+li = li.concat(['g', 'h']); //concat뒤의 배열과 li를 합친다음에 배열에 대입해줘야됨
+console.log(li);
+
+// 앞쪽에 추가
+li.unshift('z'); // 인덱스를 하나씩 추가 하고 앞쪽에 추가
+console.log(li);
+
+// 중가에 추가
+li.splice(3, 0, 'B');
+console.log(li);
