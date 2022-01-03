@@ -44,3 +44,21 @@ function get_member3() {
 console.log(get_member1());
 console.log(get_member2());
 console.log(get_member3());
+
+
+// 입력
+function get_argument(arg) { // arg : 매개변수(parameter)
+    return arg * 1000;
+}
+
+console.log(get_argument(1)); // 1: 인자(argument)
+console.log(get_argument(2));
+
+// 함수의 목표는 입력값에 따라 취지에 따라 계산된 결과가 출력되는 것
+
+function get_argument2(arg1, arg2) {
+    return arg1 + arg2;
+}
+
+console.log(get_argument2(10, 20));
+console.log(get_argument2(20, 30));
