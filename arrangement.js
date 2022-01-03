@@ -25,4 +25,10 @@ console.log(get_member1());
 console.log(get_member2());
 console.log(get_member3());
 
-function get_members
+function get_members() {
+    return ['egoing', 'k8805', 'sorialgi'];
+}
+var members2 = get_members();
+console.log(members2[0]);
+console.log(members2[1]);
+console.log(members2[2]);
