@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="greeting.js"></script>
   </head>
   <body>
     <script>
-      // 함수가 html
-      function welcome() {
-        return "Hello world";
-      }
+      // 함수가 html파일 안에만 있다면 재활용할 수 었고 다른 html파일에서 또 작성해야하고 코드가 계속 해서 길어지게 된다.
+      // 모듈화를 할 수 있다면 재사용성 증가
+      //브라우저에서 JS의 모듈화 src파일의 내용을 script태그 안에 넣은 것과 같은 효과
+      //html파일에서는 welcome함수의 동작 원리는 중요하지 않음 -> 따로 보관하는게 오히려 가독성 높여주고 간결해짐
+      //html파일의 용량도 줄여줌
+      //   function welcome() {
+      //     return "Hello world";
+      //   }
       alert(welcome());
     </script>
   </body>
