@@ -35,3 +35,25 @@ for (var name in grades) { //key라는 변수가 생성되고, grades의 key값�
 // html에 리스트 만들때 유용
 
 //,배열에서도 for in 문 사용 가능, var name에 인덱스값이 들어감
+
+
+var grade2 = {
+    'list' : {'egoing' : 10, 'k8805' : 8, 'soiralgi' : 80},
+    'show' : function() {
+        console.log('Hello world');
+    },
+    'show2' : function() {
+        console.log(this); //this는 JS에서 약속되있는 정해져있는 변수, 함수가 소속돼있는 객체를 가리킴
+    },
+    'show3' : function() {
+        for (key in this.list) {
+            console.log(key, this.list[key]);
+        }
+    }
+}
+console.log(grade2['list']['egoing']);
+grade2['show']();
+grade2['show2']();
+grade2.show3();
+
+// list왜 show함수들처럼 서로 연관돼있는 것들을 그루핑하는 프로그래밍 기법을 객체지향프로그래밍
