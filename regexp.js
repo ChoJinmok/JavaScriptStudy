@@ -42,12 +42,24 @@ console.log("Abcde".match(xi));
 var oi = /a/i;
 console.log("Abcde".match(oi));
 
-//
+//중복값을 모두 추출헐자 안할지
 var xg = /a/;
 console.log("abcdea".match(xg));
 
 var og = /a/g;
 console.log("abcdea".match(og));
 
+//여러 옵션 동시에 사용가능
 var ig = /a/ig;
 console.log("AabcdeAa".match(ig));
+
+//활용
+//자세한 정규표현식 문법은 따로 배워야함 느낌만 보기
+var pattern = /(\w+)\s(\w+)/; 
+// ()는 그룹으로 묶음
+// \w는 A~Z, a~z, 0~9 의 문자 한글자
+// +는 하나 이상
+// \s 는 white space(공백)
+var str = "coding everybody";
+var result = str.replace(pattern, "$2, $1");
+console.log(result);
