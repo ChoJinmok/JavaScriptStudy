@@ -32,3 +32,22 @@ console.log(str.match(pattern));
 
 //대체후 문자열로 전달
 console.log(str.replace(pattern, 'A'));
+
+
+//옵션
+//i는 대문자를 구분할지 안할지를 알려주는 옵션
+var xi = /a/;
+console.log("Abcde".match(xi));
+
+var oi = /a/i;
+console.log("Abcde".match(oi));
+
+//
+var xg = /a/;
+console.log("abcdea".match(xg));
+
+var og = /a/g;
+console.log("abcdea".match(og));
+
+var ig = /a/ig;
+console.log("AabcdeAa".match(ig));
