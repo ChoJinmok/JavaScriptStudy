@@ -53,7 +53,7 @@ console.log("abcdea".match(og));
 var ig = /a/ig;
 console.log("AabcdeAa".match(ig));
 
-//활용
+//활용1 캡쳐(그룹을 지정해서 그룹을 가져와서 사용하는 기능)
 //자세한 정규표현식 문법은 따로 배워야함 느낌만 보기
 var pattern = /(\w+)\s(\w+)/; 
 // ()는 그룹으로 묶음
@@ -62,4 +62,13 @@ var pattern = /(\w+)\s(\w+)/;
 // \s 는 white space(공백)
 var str = "coding everybody";
 var result = str.replace(pattern, "$2, $1");
+//$2는 두번째 그룹, $1는 첫번째 그룹
+console.log(result);
+
+
+var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+var result = content.replace(urlPattern, function(url){
+    return '<a href="'+url+'">'+url+'</a>';
+});
 console.log(result);
