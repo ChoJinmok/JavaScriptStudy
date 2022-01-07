@@ -23,3 +23,12 @@ console.log(pattern.test('abcde'));
 console.log(pattern.test('bcdef'));
 
 // exec는 값을 추출해서 배열에 넣어주는 용도, test는 있는지 없는지를 테스트해서 boolean값으로 전달
+
+
+//문자열에서 메소드 사용하기
+var pattern = /a/;
+var str = 'abcdef';
+console.log(str.match(pattern));
+
+//대체후 문자열로 전달
+console.log(str.replace(pattern, 'A'));
