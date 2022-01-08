@@ -86,7 +86,7 @@ function sum() {
 console.log(sum());
 
 (function() {
-    var MYAPP = {}
+    var MYAPP = {} // 함수의 지역변수로 바꾸고 익명 함수로 실행 -> 전역변수가 하나도 없는 어플
     MYAPP.calculator = {
         'left' : null,
         'right' : null
@@ -103,4 +103,43 @@ console.log(sum());
         return MYAPP.calculator.left + MYAPP.calculator.right;
     }
     console.log(sum());
-}())
+}());
+
+function myappfn() {
+    var MYAPP = {} // 함수의 지역변수로 바꾸고 익명 함수로 실행 -> 전역변수가 하나도 없는 어플
+    MYAPP.calculator = {
+        'left' : null,
+        'right' : null
+    }
+    MYAPP.coordinate = {
+        'left' : null,
+        'right' : null
+    }
+    // 객체 calculator와 coordinate는 둘다 left, right라는 변순를 가지지만 의미가 다름
+
+    MYAPP.calculator.left = 10;
+    MYAPP.calculator.right = 20;
+    function sum() {
+        return MYAPP.calculator.left + MYAPP.calculator.right;
+    }
+    console.log(sum());
+}
+myappfn(); // 이렇게 해도 되긴 하지만 myappfn또함 전역변수
+
+
+
+// 정적 유효 범위
+var i = 5;
+
+function a() {
+    var i = 10;
+    b(); // 호출된 시점의 전역변수(함수a의 지역변수)를 가지는 것이 아님
+}
+
+function b() {
+    console.log(i); // b함수 안에 지역변수가 없기 때문에 함수b가 선언!!!된 시점의 전역변수 값을 가져오게 된다.
+}
+
+a();
+
+// 만약 호출된 시점의 전역변수를 사용한다면 전역변수 값이 계속 달라지게 되므로 동적 유효범위라고 했을 것
