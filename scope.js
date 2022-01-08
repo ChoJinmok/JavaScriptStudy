@@ -64,3 +64,43 @@ for (var i = 0; i < 5; i++) {
 
 // 원래 유효범위라는 개념이 없었음 없었을때는 변수 앞에 자신의 닉네임을 붙여서 관리(이름의 충돌 관리)
 // 전역변수 지역변수는 디렉토리와 비슷(변수들이 많아지면 관리하기 편해짐)
+
+
+// 전역변수를 사용해야한다면
+var MYAPP = {}
+MYAPP.calculator = {
+    'left' : null,
+    'right' : null
+}
+MYAPP.coordinate = {
+    'left' : null,
+    'right' : null
+}
+// 객체 calculator와 coordinate는 둘다 left, right라는 변순를 가지지만 의미가 다름
+
+MYAPP.calculator.left = 10;
+MYAPP.calculator.right = 20;
+function sum() {
+    return MYAPP.calculator.left + MYAPP.calculator.right;
+}
+console.log(sum());
+
+(function() {
+    var MYAPP = {}
+    MYAPP.calculator = {
+        'left' : null,
+        'right' : null
+    }
+    MYAPP.coordinate = {
+        'left' : null,
+        'right' : null
+    }
+    // 객체 calculator와 coordinate는 둘다 left, right라는 변순를 가지지만 의미가 다름
+
+    MYAPP.calculator.left = 10;
+    MYAPP.calculator.right = 20;
+    function sum() {
+        return MYAPP.calculator.left + MYAPP.calculator.right;
+    }
+    console.log(sum());
+}())
