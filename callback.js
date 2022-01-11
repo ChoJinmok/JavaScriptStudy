@@ -40,7 +40,7 @@ for (var i = 0; i < process.length; i++) {
 console.log(input);
 
 
-var numbers = [20, 10, 9, 8 , 7, 6, 5, 4, 3, 2, 1];
+var numbers = [20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 numbers.sort(); // .이 붙는다는 것은 객체라는 말이다
 // JS는 배열을 만들면 배열객체를 만들어서 배열에 함께 넣어준다
 // 배열객체에는 sort라는 메소드가 있다
@@ -49,13 +49,9 @@ numbers.sort(); // .이 붙는다는 것은 객체라는 말이다
 console.log(numbers); // 순서가 이상함, 생활코딩 JS사전 보기
 
 var sortfunc = function(a, b) {
-    console.log(a, b)
-    if (a > b) {
-        return 1;
-    } else if (a < b) {
-        return -1;
-    } else {
-        return 0;
-    }
+    console.log('a : '+a+', b : ' +b);
+    return a-b;
 }
 console.log(numbers.sort(sortfunc));
+
+// 콜백함수는 수신받는 메소드의 동작방법을 변경할 수 있게 한다.
