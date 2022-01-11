@@ -38,3 +38,24 @@ for (var i = 0; i < process.length; i++) {
     input = process[i](input);
 }
 console.log(input);
+
+
+var numbers = [20, 10, 9, 8 , 7, 6, 5, 4, 3, 2, 1];
+numbers.sort(); // .이 붙는다는 것은 객체라는 말이다
+// JS는 배열을 만들면 배열객체를 만들어서 배열에 함께 넣어준다
+// 배열객체에는 sort라는 메소드가 있다
+// JS에서 기본적으로 제공하는 객체와 메소드를 내장객체, 빌트인객체, 내장메소드, 빌트인메소드라고 한다.
+// 사용자가 직접 정의한 객체와 메소드는 사용자정의 객체, 사용자정의 메소드라고 한다.
+console.log(numbers); // 순서가 이상함, 생활코딩 JS사전 보기
+
+var sortfunc = function(a, b) {
+    console.log(a, b)
+    if (a > b) {
+        return 1;
+    } else if (a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+console.log(numbers.sort(sortfunc));
