@@ -56,3 +56,27 @@ console.log(matrix.get_title());
 // factory_movie를 통해 객체를 만들고 객체가 만들어진 시점에서의 맥락(외부함수의 지역변수)에만 접근가능하고 유지되고 있음
 // 함수를 통해 만들어진 객체는 서로 영향을 주지않음(private)
 // 위의 함수처럼 작성해놓으면 title이란 변수에 접근하려면 get_title로만 접근 가능하고 변경하려면 set_title로만 수정가능
+
+
+var arr = [];
+for(var i = 0; i < 5; i++) {
+    arr[i] = function() {
+        return i;
+    }
+}
+for(var index in arr) {
+    console.log(arr[index]());
+}
+// i가 외부함수의 지역변수가 아니기 때문에 소멸됨
+// 내부함수가 외부함수의 지역변수를 참조하게 만들면됨
+var arr = [];
+for(var i = 0; i < 5; i++) {
+    arr[i] = function(id) {
+        return function() {
+            return id;
+        }
+    }(i);
+}
+for(var index in arr) {
+    console.log(arr[index]());
+}
