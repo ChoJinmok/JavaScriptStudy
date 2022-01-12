@@ -11,3 +11,30 @@ function sum() {
     return _sum;
 }
 console.log('result : ' + sum(1,2,3,4));
+
+
+function zero() {
+    console.log(
+        'zero.length', zero.length,
+        'arguments', arguments.length
+    );
+}
+zero();
+
+function one(arg1) {
+    console.log(
+        'one.length', one.length,
+        'arguments', arguments.length
+    );
+}
+one('var1', 'var2');
+
+function two(arg1, arg2) {
+    console.log(
+        'two.length', two.length,
+        'arguments', arguments.length
+    );
+}
+two('val1');
+// 함수의 매개변수와 인자의 수를 일치시켜야하는 경우가 있다(JS는 관대해서 매개변수와 인자의 수가 일치 안해도 오류X)
+// 그럴경우 비교를 통해서 오류를 내거나 알려 줄 수 있다.
