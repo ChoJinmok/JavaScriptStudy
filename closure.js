@@ -15,3 +15,13 @@ function outter2() {
     inner();
 }
 outter2();
+
+
+function outter3() {
+    var title = 'coding everybody';
+    return function() {
+        console.log(title);
+    };
+};
+inner = outter3();
+inner();
