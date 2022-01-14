@@ -12,3 +12,19 @@ person.introduce = function() { //객체의 property가 함수를 담고 있다�
 }
 console.log(person.introduce());
 // 객체를 정의하는 코드와 property들이 분리 되어 있어 다른 코드가 끼어들 여지를 주고 가독성도 떨어지게된다.
+
+var person = {
+    'name' : 'egoing',
+    'introduce' : function() {
+        return 'My name is ' + this.name;
+    }
+}
+console.log(person.introduce());
+
+var person2 = {
+    'name' : 'leezche',
+    'introduce' : function() {
+        return 'My name is ' + this.name;
+    }
+}
+// 이런식으로 계속 만들면 중복이 많아짐(메소드가 완전 동일) -> 안좋은 코드(코드의 양이 많아지고 가독성 떨어지고 유지보수 어려원짐)
