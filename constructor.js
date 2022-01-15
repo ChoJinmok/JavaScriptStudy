@@ -28,3 +28,28 @@ var person2 = {
     }
 }
 // 이런식으로 계속 만들면 중복이 많아짐(메소드가 완전 동일) -> 안좋은 코드(코드의 양이 많아지고 가독성 떨어지고 유지보수 어려원짐)
+
+// JS는 함수지향언어라고도 불림 함수가 JS에서 얼마나 큰 역할을 하는지 짐작할 수 있는데 JS에서 객체를 제대로 이해하려면 함수가 우선시 되야한다. 함수에서 흔들리면 객체도 흔들림.
+function Person() {}
+var p0 = Person(); //Person에서 아무것도 리턴하고 있지 않기떄문에 p0은 undefined
+var p = new Person();//함수 앞에 new가 붙으면 Person을 함수라고 부르지 않고 생성자라고 부른다.(객체를 생성)
+console.log(p);//빈객체가 만들어짐, var p = {};과 비슷한 결과
+//함수는 객체의 시중만 드는 것이 아닌 객체의 창시자이기도 하다
+p.name = 'egoing';
+p.introduce = function() {
+    return 'My name is ' + this.name;
+}
+console.log(p.introduce());
+// 이렇게만 하면 {}이렇게 객체 만들었을때와 차이가 없음
+
+function Person2(name) {
+    this.name = name;
+    this.introduce = function() {
+        return 'My name is ' + this.name;
+    }
+}
+// 생성자는 객체에대한 초기화를 진행함, 객체의 정보 역할을 세팅해놓은 것 -> init, initialize
+var p1 = new Person2('egoing');
+console.log(p1.introduce());
+var p2 = new Person2('leezche');
+console.log(p2.introduce());
