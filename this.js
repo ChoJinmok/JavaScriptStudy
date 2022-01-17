@@ -30,3 +30,22 @@ if (funcThis === o2) {
     console.log('o2');
 }
 // this는 객체에대한 초기화가 끝나고 객체가 식별자에 담기기 전에 객체를 reference로 활용할 수 있게 해주는 키워드
+
+var o = {};
+var p = {};
+function funC() {
+    switch(this) {
+        case o:
+            console.log('o');
+            break;
+        case p:
+            console.log('p');
+            break;
+        case global:
+            console.log('global')
+            break;
+    }
+}
+funC();
+funC.apply(o);
+funC.apply(p);
