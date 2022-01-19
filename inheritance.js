@@ -11,6 +11,7 @@ function Person(name) {
 var p1 = new Person('egoing');
 console.log(p1.introduce());
 
+
 function Person2(name) {
     this.name = name;
 }
@@ -20,3 +21,11 @@ Person2.prototype.introduce = function() {
 }
 var p2 = new Person2('egoing');
 console.log(p2.introduce());
+
+
+function Programmer(name) {
+    this.name = name;
+}
+Programmer.prototype = new Person();
+var p3 = new Programmer('egoing');
+console.log(p3.introduce());
