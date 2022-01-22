@@ -8,10 +8,15 @@ function Ultra(){};
 Ultra.prototype.ultraProp = true;
 
 function Super(){};
-Super.prototype = new Ultra();
+var t = new Ultra();
+t.ultraProp = 4
+Super.prototype = t;
+// Super.prototype = new Ultra();
 
 function Sub(){};
 Sub.prototype = new Super();
+// Sub.prototype.ultraProp = 2;
 
 var o = new Sub();
+// o.ultraProp = 1;
 console.log(o.ultraProp);
