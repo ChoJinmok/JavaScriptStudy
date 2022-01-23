@@ -33,3 +33,11 @@ var o = {'name':'egoing', 'city':'seoul'};
 console.log(o.contain('egoing'));
 var a = ['egoing', 'leezche', 'grapittie'];
 console.log(a.contain('leezche'));
+// 위의 방법은 모든 객체에 영향을 주기때문에 신중하게 하는 것이 좋다
+for(var name in o){
+    if(o.hasOwnProperty(name)){ //인자로 전달된 값을 자기가 property로 가지고 있는지 체크해줌
+        console.log(name);
+    }
+}
+// 모든 객체에 contain이 포함되게 된다.
+// for in구문을 작성했을떄 자기가 객체에 넣지 않은 데이터가 추가되서 나옴
