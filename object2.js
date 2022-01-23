@@ -20,3 +20,16 @@ var a = new Array(1,2,3); // Array도 Object의 자식
 console.log('a.toString() :', a.toString());
 // new Object()실행하는 순간 prototype property에 저장돼있는 객체를 원형으로 하는 객체가 생성
 // Object.prototype를 수정해서 기능을 추가 할 수도 있음
+
+Object.prototype.contain = function(needle) {
+    for(var name in this){
+        if(this[name] === needle){
+            return true;
+        }
+    }
+    return false;
+}
+var o = {'name':'egoing', 'city':'seoul'};
+console.log(o.contain('egoing'));
+var a = ['egoing', 'leezche', 'grapittie'];
+console.log(a.contain('leezche'));
