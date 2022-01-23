@@ -9,3 +9,4 @@ console.log(str.charAt(0));
 str.prop = 'everyvody';
 // 다시 원시데이터로 돌아갔음
 console.log(str.prop);
+// wrapper(감싸는) object는 원시데이터를 객체처럼 사용할때 순간적으로 객체처럼 보이게 감싸 준다.
