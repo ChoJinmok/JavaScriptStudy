@@ -31,16 +31,35 @@
 // console.log(result);
 
 // 간단할 떄만 사용!! 남용금지!! 복잡해지면 가독성 떨어지게 됨
-let a = 123;
-// a = a > 100 ? 100 : a < 50 ? 50 : a;
-// console.log(a);
-// 위의 코드가 어떻게 독장하는지 파악하기 어려움
+// let a = 123;
+// // a = a > 100 ? 100 : a < 50 ? 50 : a;
+// // console.log(a);
+// // 위의 코드가 어떻게 독장하는지 파악하기 어려움
 
-// a = ( a > 100 ? 100 : a < 50 ) ? 50 : a;
-// console.log(a);
+// // a = ( a > 100 ? 100 : a < 50 ) ? 50 : a;
+// // console.log(a);
 
-a = a > 100 ? 100 : ( a < 50 ? 50 : a );
-console.log(a);
+// a = a > 100 ? 100 : ( a < 50 ? 50 : a );
+// console.log(a);
 // 괄호에 따라 값이 달라짐
 
 // ?는 세 개의 피연산자가 필요함 -> 삼항 연산자
+
+// switch
+// 너무 많은 else if문을 사용하고 있다면 switch로 변경 고려
+let a = '1';
+let result = '';
+
+switch (a) {
+    case 1:
+        result = 'Number 1';
+        break;
+    case '1':
+        result = 'String 1';
+        break;
+    default:
+        result = "I don't know";
+        break;
+}
+console.log(a);
+// break문은 선택사항이다. switch문을 마무리 지어준다. 없으면 다음 case로 넘어간다.
